@@ -1,0 +1,1 @@
+Hola, soy Jose Montoya, el encargado de desarrollar la página principal de este proyecto. En esta sección encontrarás una breve introducción a la pollería, destacando la especialidad y sabor característico. También  incluimos un menú de navegación que permitirá explorar las páginas creadas por mis compañeros.
