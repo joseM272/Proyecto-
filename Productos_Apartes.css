@@ -1,6 +1,19 @@
 body{
     background-color: goldenrod;
 }
+nav {
+    background-color: #e67e22;
+    padding: 14px 0;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 .titulo{
     text-align: center;
 }
