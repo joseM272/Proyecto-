@@ -1,32 +1,79 @@
-nav{
-    background-color:#e67e22; 
+nav {
+    background-color: #e67e22;
     padding: 14px 0;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.88);
-    text-align: center; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
-nav ul{
+body {
+    padding-top: 70px; 
+    background-color: #fdd90d;
+}
+nav ul {
     list-style: none;
-    margin: o;
+    margin: 0;
     padding: 0;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
-    margin: o 20px;
+    margin: 0 20px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     letter-spacing: 1px;
-    transition: color 0.3, text-shadow 0.3;
-    padding: 6pxx 12px;
+    transition: color 0.3s, text-shadow 0.3s;
+    padding: 6px 12px;
     border-radius: 4px;
 }
-nav ul li a:hover{
-    color: #E67E22;
+
+nav ul li a:hover {
+    color: #e67e22;
     background: #fff;
     text-shadow: 0 0 6px #ffd700;
+}
+.img-principal{
+    display: block;
+    margin: 40px auto 20px auto;
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+}
+.principal {
+    position: relative;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.principal .img-principal {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.principal h1 {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(230, 126, 34, 0.85);
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    text-shadow: 2px 2px 8px #000;
+    pointer-events: none;
 }
