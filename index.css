@@ -155,7 +155,7 @@ display: block;
 }
 .gif, .efecto:hover .no-gif{
     display: none;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     content: center;
 }
