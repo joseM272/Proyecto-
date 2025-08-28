@@ -1,5 +1,14 @@
 body{
     background-color: goldenrod;
+    
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: bottom 200px; 
 }
 nav {
     background-color: #e67e22;
@@ -42,6 +51,20 @@ nav ul li a:hover {
     text-align: center;
     padding: 45px;
 }
-div{
-    
+.img-principal{
+display: block;
+margin: 40px auto 20px auto;
+max-width: 900px;
+width: 100%;
+height: auto;
+}
+.container{
+column-count: 2;
+column-gap: 50px;
+width: 100%;
+margin: 0 auto;
+min-width: 100px;
+max-width: 700px;
+min-height: 1800px;
+max-height: 1800px;
 }
