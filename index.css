@@ -1,3 +1,7 @@
+body {
+    padding-top: 70px; 
+    background-color: #fdd700;
+}
 nav {
     background-color: #e67e22;
     padding: 14px 0;
@@ -10,10 +14,6 @@ nav {
     left: 0;
     width: 100%;
     z-index: 1000;
-}
-body {
-    padding-top: 70px; 
-    background-color: #fdd90d;
 }
 nav ul {
     list-style: none;
