@@ -61,10 +61,7 @@ width: 100%;
 height: auto;
 }
 
-.tarjeta:hover{
-transform: scale(1.5);
-border-color: blue;
-}
+
 .container{
 column-count: 2;
 column-gap: 50px;
