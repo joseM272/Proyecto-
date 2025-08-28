@@ -51,20 +51,18 @@ nav ul li a:hover {
     text-align: center;
     padding: 45px;
 }
-.img-principal{
-display: block;
-margin: 40px auto 20px auto;
-max-width: 900px;
-width: 100%;
-height: auto;
-}
+
 .container{
 column-count: 2;
-column-gap: 50px;
+column-gap: 105px;
 width: 100%;
 margin: 0 auto;
-min-width: 100px;
-max-width: 700px;
-min-height: 1800px;
-max-height: 1800px;
+min-width: 150px;
+max-width: 1000px;
+min-height: 2000px;
+max-height: 2500px;
+}
+.colum{
+    padding: 15px;
+    border: 1px solid black;
 }
