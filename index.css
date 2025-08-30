@@ -47,6 +47,7 @@ transition: color 0.3s, text-shadow 0.3;
 padding: 6px 12px;
 border-radius: 4px;
 }
+
 nav ul li a:hover{
 color: #e67e22;
 background: #fff;
@@ -77,27 +78,10 @@ max-height: 1800px;
     text-align: center;
 }
 
-
-
 .colum{
     padding: 10px;
     border: 1px solid black;
 }
-
-.imagen{
- display: grid;
- grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
- margin: left;
- 
-}
-.imagen2{
-display: flex;
-justify-content: center;
-margin-bottom: 50px;
-margin-top: 35px;
-}
-
-
 
 .i1{
 width: 350px;
@@ -122,10 +106,6 @@ display: block;
     display: inline-block;
 }
 
-.image-descripcion{
-display: block;
-    text-align: center;
-}
 .image-with-text img{
     display: block;
     margin: 0 auto;
