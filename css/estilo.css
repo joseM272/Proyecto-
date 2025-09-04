@@ -1,16 +1,18 @@
 .ubicacion {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
     gap: 25px;
     padding: 20px;
-}
-.ubicacion img {
-    width: 100%;
-    border-radius: 10px;
+  }
+  
+  /* Todas las imágenes */
+  .ubicacion img {
+    width: 20%;
     transition: transform 0.3s;
-}
-
-.ubicacion img:hover {
+  }
+  
+  /* Pseudo-clase :hover para imágenes */
+  .ubicacion img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
+  }
+  
