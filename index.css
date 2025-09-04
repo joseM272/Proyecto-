@@ -150,7 +150,19 @@ margin: 40px 0;
     color: #333;
     margin-bottom: 16PX;
 }
-card:hover{
+.card:hover{
     transform: translateY(-8) scale(1.03);
     box-shadow: 0 6px 24px rgb(230,126,34,0.18);
+}
+.bt{
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgb(0,0,0,0.10)
 }
