@@ -135,3 +135,10 @@ margin: 40px 0;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
 }
+.card img{
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
