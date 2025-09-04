@@ -142,3 +142,7 @@ margin: 40px 0;
     margin-bottom: 16px;
     border-radius: 8px;
 }
+.card h3{
+    color: #e67e22;
+    margin-bottom: 8px;
+}
