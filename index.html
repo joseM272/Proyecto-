@@ -1,52 +1,103 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
 	<title>Pagína de contactos</title>
 	<link rel="stylesheet" href="style.css">
-    <title>Polleria</title>
 </head>
 <body> 
   <header>
-    <h1>Pagína de contactos</h1>
- 
      <nav>
          <ul>
-             <li><a href="0">Inicio</a></li>
-             <li><a href="0">Menú</a></li>
-             <li><a href="0">Promociones</a></li>
-             <li><a href="0">Contacto</a></li>
-             </ul>
+             <li><a href="index.html">Inicio</a></li>
+             <li><a href="Productos.html  ">Productos</a></li>
+             <li><a href="Productos_Apartes.html">Kiosco</a></li>
+             <li><a href="index_contac.html">Contacto</a></li>
+              <li><a href="info-ubicacion.html">Ubicacion</a></li>
+          </ul>
     </nav>         
+  <div class="principal">
+    <img src="img/polleria.jpeg" alt="Edificio" class="img-principal">
+   <h1>Polleria Belgrano</h1>
+</div>
   </header>
-	<div class="horarios">
-    <section>
-        <h1>Horarios</h1>
-        <ul>
-            <li>de lunes a viernes: 9hs a 5hs</li>
-            <li>fines de semana: 24hs a las 00hs</li>
-        </ul>
-    </section>            
-   </div>
-	<main class="contenido.principal" id="main">
-		<section>
-			<h1>Contactanos!</h1>
-				<h2>Datos de Contacto:</h2>
-				<ul>
-					<ul>Telefono: +54 9 299 238-5555/+54 9 299 218-5252</ul>
-					<ul>Fax: +54 221 000-1122</ul>
-					<ul>e-mail: larica.polla@gmail.com</ul>
-				</ul>
-		</section>
-	<div class="direccion">
-		<h2>Local Principal</h2>
-		<p>(direccion aca wwww)</p>
-	</div>
-	<div class="redes">
-		<img src="Imagenes/1409943.png" alt="Facebook logo" title="Facebook: nombre" width="75" height="75">
-		<img src="Imagenes/4cffbb301c0463ba8a8af7397da21391.png" alt="WhatsApp logo" title="WhatsApp" width="75" height="75">
-		<img src="Imagenes/8d48a394f3950650119f254b1cc7ca4f.png" alt="Instagram logo" title="Instagram: nombre" width="75" height="75">
-	</div>
+
+  <main class="contenido" id="main">
+    <section class="descripcion lateral-izq">
+        <h2>Calidad y Atencion</h2>
+         <p>Garantizadas en Pollería Belgrano. Vení y visítanos en <a href="info-ubicacion.html">Ricardo Rojas, Neuquén</a> y encontrá una gran variedad de cortes como pechuga, patas, alitas, medallones y más, siempre listos para que los prepares a tu gusto, en recetas caseras, a la parrilla o al horno. Nuestro compromiso es brindar atención, calidad y precios justos, porque creemos que la buena comida empieza con buenos ingredientes.</p>
+    </section>
+    <section class="horrarios lateral-der">
+        <h2>Horarios</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Apertura</th>
+              <th>Cierre</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lunes</td>
+              <td>09:00</td>
+              <td>20:00</td>
+            </tr>
+            <tr>
+              <td>Martes</td>
+              <td>09:00</td>
+              <td>20:00</td>
+            </tr>
+            <tr>
+              <td>Miércoles</td>
+              <td>09:00</td>
+              <td>20:00</td>
+            </tr>
+            <tr>
+              <td>Jueves</td>
+              <td>09:00</td>
+              <td>20:00</td>
+            </tr>
+            <tr>
+              <td>Viernes</td>
+              <td>09:00</td>
+              <td>21:00</td>
+            </tr>
+            <tr>
+              <td>Sábado</td>
+              <td>09:00</td>
+              <td>21:00</td>
+            </tr>
+            <tr>
+              <td>Domingo</td>
+              <td>10:00</td>
+              <td>14:00</td>
+            </tr>
+          </tbody>
+        </table>
+     </section>    
+   <section class="productos_dest">
+    <h2>Productos destacados</h2>
+      <div class="grid-Prod-dest">
+         <div class="card">
+         <img src="Fotos/pollo entero.jpg" alt="Pollo entero">
+         <h3>Pollo entero</h3>
+         <p>Ideal para asar o cocinar al horno.</p>
+         <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
+         </div>  
+         <div class="card">
+         <img src="Fotos/images.jpg" alt="pechuga">
+         <h3>Pechuga</h3>
+         <p>Perfecta para recetas saludables.</p>
+         <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
+         </div>
+         <div class="card">
+         <img src="Fotos/nuggets de pollo.jpg" alt="pechuga">
+         <h3>Nuggets de pollo</h3>
+         <p>Ideales para los chicos.</p>
+         <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>     
+         </div>
+    </div>  
+</main>    
 </body>
 </html>
-
