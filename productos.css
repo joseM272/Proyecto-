@@ -1,8 +1,14 @@
 body{
 
-
+background-color: #fdd700; 
 text-align: center;
-
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-right: 10px;
+margin-bottom: 10px;
+margin: bottom 10px; ;
 
 }
 .h{
@@ -114,3 +120,77 @@ display: block;
     height: 150px;
     content: center;
 }
+
+
+.scene{
+  width: 300px;
+height: 200px;
+perspective: 500px;
+}
+.scene1{
+  width: 100px;
+height: 200px;
+perspective: 500px;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.scene:hover .card{
+ transform: rotateY(180deg);
+}
+
+.card__face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.card__face1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+     margin-left: 100px;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #999;
+    border-radius: 10px;
+
+}
+.card__face2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 200px;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #999;
+    border-radius: 10px;
+
+}
+.card__face--front{
+    background-color: #e67e22;
+}
+
+.card__face--back{
+    background-color: #f44336;
+    transform: rotateY(180deg);
+    color:#fff;
+} 
