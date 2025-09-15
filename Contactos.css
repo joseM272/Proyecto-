@@ -53,3 +53,14 @@ header h1 {
     text-align: center;
     margin: 50px;
 }
+
+.contacto{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 20px;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px;
+
+}
+
