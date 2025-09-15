@@ -167,3 +167,10 @@ perspective: 500px;
     transform: rotateY(180deg);
     color:#fff;
 } 
+
+.footer-info{
+    margin-top: 50px;
+    border: 2px solid black;
+    padding-bottom: 10px;
+}
+ 
