@@ -43,3 +43,13 @@ nav ul li a:hover {
     background: #fff;
     text-shadow: 0 0 6px #ffd700;
 }
+
+header h1 {
+    text-align: center;
+}
+
+.principal h1 {
+    background-color: #e67e22;
+    text-align: center;
+    margin: 50px;
+}
