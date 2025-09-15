@@ -16,11 +16,30 @@ nav {
     width: 100%;
     z-index: 1000;
 }
-
-nav ul{
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline-flex;
-    gap: 30px
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: color 0.3s, text-shadow 0.3s;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+    background: #fff;
+    text-shadow: 0 0 6px #ffd700;
 }
