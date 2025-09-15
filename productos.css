@@ -172,7 +172,9 @@ perspective: 500px;
     margin-top: 50px;
     border: 2px solid black;
     padding-bottom: 10px;
+    background-color: #e67e22;
 }
 .footer-social{
+color: #f44336;
 }
  
