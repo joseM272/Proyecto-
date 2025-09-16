@@ -28,3 +28,8 @@ left: 0;
 width: 100%;
 z-index: 1000;
 }
+nav ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
