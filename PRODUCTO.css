@@ -52,3 +52,13 @@ color: #e67e22;
 background: #fff;
 text-shadow: 0 0 6px #ffd700;
 }
+.container{
+column-count: 2;
+column-gap: 50px;
+width: 100%;
+margin: 0 auto;
+min-width: 100px;
+max-width: 700px;
+min-height: 1800px;
+max-height: 1800px;
+}
