@@ -84,3 +84,7 @@ display: block;
     position: relative;
     display: inline-block;
 }
+.image-with-text img{
+    display: block;
+    margin: 0 auto;
+}
