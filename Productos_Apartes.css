@@ -1,6 +1,5 @@
 body{
-    background-color: #fdd700;
-
+background-color: #fdd700;
 }
 nav {
     background-color: #e67e22;
@@ -58,3 +57,10 @@ max-height: 2500px;
     padding: 15px;
     border: 1px solid black;
 }
+
+.scena{
+    width: 200px ;
+    height: 300px;
+    perspective: 1000px;
+}
+
