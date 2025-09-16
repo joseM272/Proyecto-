@@ -97,3 +97,8 @@ display: block;
     height: 150px;
     content: center;
 }
+.scene{
+  width: 300px;
+height: 200px;
+perspective: 500px;
+}
