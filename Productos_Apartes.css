@@ -39,14 +39,18 @@ nav ul li a:hover {
     text-shadow: 0 0 6px #ffd700;
 }
 .titulo{
-    text-align: center;
-    padding: 45px;
-    margin: auto;
-    background-color: #dd9c11;
-    border-radius: 5px;
-    max-height: 50px;
-    max-width: 1700px;
-    min-width: 1800px;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(230, 126, 34, 0.85);
+    padding: 18px 40px;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    text-shadow: 2px 2px 8px #000;
+    pointer-events: none;
 }
 
 .container{   
