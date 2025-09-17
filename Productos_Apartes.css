@@ -40,12 +40,12 @@ nav ul li a:hover {
 }
 .titulo{
     position: absolute;
-    top: 24px;
+    top: 55px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
     background: rgba(230, 126, 34, 0.85);
-    padding: 18px 40px;
+    padding:  50px;
     border-radius: 12px;
     font-size: 2.5rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
