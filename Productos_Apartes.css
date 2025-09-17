@@ -41,7 +41,8 @@ nav ul li a:hover {
 .titulo{
     text-align: center;
     padding: 45px;
-
+    background-color: #c26c20;
+    border-radius: 5px;
 }
 
 .container{   
