@@ -41,10 +41,12 @@ nav ul li a:hover {
 .titulo{
     text-align: center;
     padding: 45px;
+    margin: auto;
     background-color: #c26c20;
     border-radius: 5px;
-  
-    
+    max-height: 50px;
+    max-width: 1700px;
+    min-width: 1800px;
 }
 
 .container{   
