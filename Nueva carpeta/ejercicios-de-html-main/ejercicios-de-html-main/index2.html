@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Unidad 7 – Botones Animados (HTML + CSS)</title>
+<style>
+  :root{
+    --bg: #0f1226;
+    --panel: #151936;
+    --text: #e9ecff;
+    --muted: #9aa3c7;
+    --brand: #6c8dfa;
+    --brand-2: #8b6cfa;
+    --success: #39d98a;
+    --warn: #ffb020;
+    --danger: #ff5c7c;
+    --radius: 14px;
+    --speed: .35s;
+  }
+
+  /* Reset mínimo & look base */
+  * { box-sizing: border-box; }
+  html,body{ height:100% }
+  body{
+    margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    background: radial-gradient(1200px 800px at 20% 0%, #1a1f44 0%, var(--bg) 55%) fixed;
+    color: var(--text);
+    display:grid; place-items:center; padding:28px;
+  }
+
+  .wrap{
+    width:min(1100px, 98vw);
+  }
+
+  h1{ margin:0 0 4px; font-size: clamp(22px, 2.6vw, 34px); }
+  p.lead{ margin:0 0 22px; color: var(--muted) }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:16px;
+    background: color-mix(in hsl, var(--panel) 92%, transparent);
+    padding:18px;
+    border-radius: calc(var(--radius) + 4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
+  }
+
+  /* Estilo base accesible para todos los botones */
+  .btn{
+    --btn-bg: #23284f;
+    --btn-fg: var(--text);
+    --btn-bd: rgba(255,255,255,.12);
+    --btn-shadow: 0 6px 18px rgba(0,0,0,.35);
+    --btn-radius: var(--radius);
+
+    position:relative;
+    display:inline-flex; align-items:center; justify-content:center;
+    gap:.6rem;
+    width:100%;
+    min-height: 48px;
+    padding: 12px 18px;
+    border-radius: var(--btn-radius);
+    border: 1px solid var(--btn-bd);
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    text-decoration:none;
+    letter-spacing:.2px;
+    line-height:1;
+    transition: transform var(--speed) cubic-bezier(.2,.8,.2,1),
+                box-shadow var(--speed), background var(--speed), color var(--speed), border-color var(--speed);
+    box-shadow: var(--btn-shadow);
+    cursor:pointer;
+    isolation:isolate; /* para overlays */
+  }
+  .btn:where(:hover){ transform: translateY(-2px) }
+  .btn:active{ transform: translateY(0) scale(.98) }
+  .btn:focus-visible{
+    outline: 3px solid color-mix(in oklab, var(--brand) 60%, white 5%);
+    outline-offset: 2px;
+  }
+
+  /* 1) Fade + lift */
+  .btn.fade:hover{
+    background: #2a3162; box-shadow: 0 10px 24px rgba(0,0,0,.45);
+  }
+
+  /* 2) Scale suave */
+  .btn.scale{ }
+  .btn.scale:hover{ transform: translateY(-2px) scale(1.04) }
+
+  /* 3) 3D press (sombra profunda) */
+  .btn.depth{
+    box-shadow: 0 10px 0 rgba(0,0,0,.35), 0 18px 30px rgba(0,0,0,.35);
+    transition: transform var(--speed), box-shadow var(--speed);
+  }
+  .btn.depth:hover{ transform: translateY(-3px) }
+  .btn.depth:active{ transform: translateY(1px); box-shadow: 0 3px 0 rgba(0,0,0,.4), 0 8px 18px rgba(0,0,0,.45) }
+
+  /* 4) Gradiente deslizante */
+  .btn.gradient{
+    --btn-bg: linear-gradient(110deg, var(--brand) 0%, var(--brand-2) 50%, var(--brand) 100%);
+    background-size: 200% 100%;
+    border-color: transparent;
+  }
+  .btn.gradient:hover{ background-position: 100% 0 }
+
+  /* 5) Border draw (dibujo de borde) */
+  .btn.border-draw{
+    background: transparent;
+    border-color: transparent;
+  }
+  .btn.border-draw::before, .btn.border-draw::after{
+    content:""; position:absolute; inset:0; border-radius: inherit; pointer-events:none;
+  }
+  .btn.border-draw::before{
+    border:1px solid rgba(255,255,255,.14); inset:3px;
+    opacity:.8;
+  }
+  .btn.border-draw::after{
+    border:2px solid transparent;
+    --g: conic-gradient(from 180deg at 50% 50%, transparent 10%, white 10% 35%, transparent 35% 60%, white 60% 85%, transparent 85%);
+    mask: var(--g);
+    -webkit-mask: var(--g);
+    inset:-2px;
+    transition: opacity var(--speed);
+    opacity:.0;
+  }
+  .btn.border-draw:hover::after{ opacity: .9 }
+
+  /* 6) Underline slide (tipo enlace) */
+  .btn.underline{ background: transparent; border-color: transparent; box-shadow:none; justify-content:flex-start; }
+  .btn.underline span{ position:relative }
+  .btn.underline span::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-3px; height:2px;
+    background: currentColor; transition: right var(--speed) cubic-bezier(.2,.8,.2,1);
+  }
+  .btn.underline:hover span::after{ right:0 }
+
+  /* 7) Glow pulsante (animación) */
+  @keyframes glow {
+    0% { box-shadow: 0 0 0 rgba(108,141,250,0), 0 0 0 rgba(108,141,250,0); }
+    70%{ box-shadow: 0 0 28px rgba(108,141,250,.45), 0 0 54px rgba(108,141,250,.25); }
+    100%{ box-shadow: 0 0 0 rgba(108,141,250,0), 0 0 0 rgba(108,141,250,0); }
+  }
+  .btn.glow{
+    --btn-bg: #212754;
+    border-color: rgba(108,141,250,.35);
+  }
+  .btn.glow:hover{ animation: glow 1.6s ease-out infinite }
+
+  /* 8) Ripple (sin JS, desde centro) */
+  .btn.ripple{ overflow:hidden }
+  .btn.ripple::after{
+    content:""; position:absolute; width:16px; height:16px; inset:0; margin:auto;
+    background: radial-gradient(circle, rgba(255,255,255,.35) 0%, rgba(255,255,255,0) 70%);
+    border-radius:50%; transform: scale(0); opacity:0; transition: none;
+  }
+  .btn.ripple:hover::after{
+    animation: ripple .7s ease-out forwards;
+  }
+  @keyframes ripple{
+    0%{ transform: scale(0); opacity:.6 }
+    100%{ transform: scale(18); opacity:0 }
+  }
+
+  /* 9) Flecha que rota + empuje de texto */
+  .btn.arrow::after{
+    content:"➜"; font-size:1.05em; transition: transform var(--speed);
+  }
+  .btn.arrow:hover{ padding-left:22px; padding-right:14px }
+  .btn.arrow:hover::after{ transform: translateX(6px) rotate(-8deg) }
+
+  /* 10) Morph (píldora → cuadrado + tracking) */
+  .btn.morph{
+    border-radius: 999px; letter-spacing:.2px;
+  }
+  .btn.morph:hover{
+    border-radius: 10px; letter-spacing:.6px;
+    background: linear-gradient(135deg, #2b305e 0%, #23284f 100%);
+  }
+
+  /* Variantes de color (utilizadas en algunos ejemplos) */
+  .success{ --btn-bg: #123c2b; border-color: #2c6e54 }
+  .warn{ --btn-bg: #4a3512; border-color: #b9831c }
+  .danger{ --btn-bg: #4a1e2a; border-color: #ca4862 }
+
+  /* Respeta accesibilidad: menos movimiento si el usuario lo pide */
+  @media (prefers-reduced-motion: reduce){
+    .btn, .btn::after, .btn::before, *{
+      transition-duration: 0.001ms !important;
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Unidad 7 – Hover, Transiciones y Transformaciones</h1>
+    <p class="lead">Colección de botones animados hechos solo con HTML + CSS. Probá pasar el mouse y hacer foco con <kbd>Tab</kbd>.</p>
+
+    <div class="grid">
+      <button class="btn fade">1) Fade + Lift</button>
+      <button class="btn scale">2) Scale suave</button>
+      <button class="btn depth">3) 3D Press</button>
+      <button class="btn gradient">4) Gradiente deslizante</button>
+      <button class="btn border-draw">5) Border draw</button>
+      <button class="btn underline"><span>6) Underline slide</span></button>
+      <button class="btn glow">7) Glow pulsante</button>
+      <button class="btn ripple">8) Ripple CSS</button>
+      <button class="btn arrow">9) Flecha animada</button>
+      <button class="btn morph">10) Morph pill → square</button>
+
+      <!-- Ejemplos con variantes de color -->
+      <button class="btn gradient success">OK / Success</button>
+      <button class="btn gradient warn">Atención</button>
+      <button class="btn gradient danger">Eliminar</button>
+    </div>
+  </div>
+</body>
+</html>

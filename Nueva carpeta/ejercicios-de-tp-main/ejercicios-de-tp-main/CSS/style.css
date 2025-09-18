@@ -1,0 +1,166 @@
+/* Navegación */
+.nav {
+  background-color: #2e7d32;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.nav a {
+  color: white;
+  margin:0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#titulo {
+  font-size: 1.5rem;
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Cards de productos destacados */
+.destacados {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+/* Página de productos */
+.producto {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #e8f5e9;
+  border-left: 5px solid #388e3c;
+}
+
+/* Formulario de contacto */
+form {
+  max-width: 300px;
+  margin: auto;
+  padding: 2rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 3px solid #f00c0c;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Formulario con animaciones */
+.formulario {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: aparecer 4s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.formulario:hover {
+  transform: scale(1.2);
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+.formulario input[type="submit"] {
+  background-color: #388e3c;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario input[type="submit"]:hover {
+  background-color: #2e7d32;
+}
+
+/* Animación al cargar el formulario */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mensaje de envío */
+#mensaje-enviado {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #c8e6c9;
+  color: #256029;
+  border: 1px solid #66bb6a;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Cuando se muestra */
+#mensaje-enviado.mostrar {
+  display: block;
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
