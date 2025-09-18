@@ -1,29 +1,36 @@
 body{
-
-background-color: #fdd700; 
-text-align: center;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-right: 10px;
-margin-bottom: 10px;
-margin: bottom 10px; ;
-
+    background-color: #fdd700; 
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: bottom 10px; ;
 }
-.h{
-margin-top: 100px;
+
+.titulo{
+    text-align: center;
+    padding: 45px;
+    margin: auto;
+    background-color: #dd9c11;
+    border-radius: 5px;
+    max-height: 25px;
+    max-width: 1700px;
+    min-width: 1800px;
 }
+
 nav{
-background-color: #e67e22;
-padding: 14px 0;
-border-radius: 0 0 8px 8px rgba(0,0,0,0.18);
-text-align: center;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 1000;
+    background-color: #e67e22;
+    padding: 14px 0;
+    border-radius: 0 0 8px 8px rgba(0,0,0,0.18);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul{
@@ -33,8 +40,8 @@ padding: 0;
 }
 
 nav ul li{
-display: inline-block;
-margin: 0 20px;
+    display: inline-block;
+    margin: 0 20px;
 }
 
 nav ul li a{
@@ -52,65 +59,4 @@ nav ul li a:hover{
 color: #e67e22;
 background: #fff;
 text-shadow: 0 0 6px #ffd700;
-}
-
-.img-principal{
-display: block;
-margin: 40px auto 20px auto;
-max-width: 900px;
-width: 100%;
-height: auto;
-}
-
-
-.container{
-column-count: 2;
-column-gap: 50px;
-width: 100%;
-margin: 0 auto;
-min-width: 100px;
-max-width: 700px;
-min-height: 1800px;
-max-height: 1800px;
-}
-
-.container2{
-    text-align: center;
-}
-
-.colum{
-    padding: 10px;
-    border: 1px solid black;
-}
-
-.i1{
-width: 350px;
-height: 250px;
-margin-right: 25px;
-display: flex;
-}
-.i2{
-width: 320px;
-height: 250px;
-display: block;
-}
-
-.container{
-    display: flex;
-}
-.colum{
-    width: 50%;
-}
-.image-container{
-    position: relative;
-    display: inline-block;
-}
-
-.image-with-text img{
-    display: block;
-    margin: 0 auto;
-}
-
-.mapa{
-    position: relative;
 }

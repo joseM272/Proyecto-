@@ -44,7 +44,7 @@ nav ul li a:hover {
     margin: auto;
     background-color: #dd9c11;
     border-radius: 5px;
-    max-height: 50px;
+    max-height: 25px;
     max-width: 1700px;
     min-width: 1800px;
 }
