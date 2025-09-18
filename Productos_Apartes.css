@@ -84,6 +84,8 @@ max-height: 2500px;
     margin-top: 10px;
 }
 
+
+/*css de los productos / tarjetas*/
 .scena:hover .tarjeta{
     transform: rotateY(180deg);
     box-shadow: 0 6px 24px rgb(230,126,34,0.18);
