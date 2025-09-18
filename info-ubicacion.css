@@ -111,12 +111,6 @@ display: block;
     margin: 0 auto;
 }
 
-.no-gif, .efecto:hover .gif{
-    display: flex;
-}
-.gif, .efecto:hover .no-gif{
-    display: none;
-    width: 150px;
-    height: 150px;
-    content: center;
+.mapa{
+    position: relative;
 }
