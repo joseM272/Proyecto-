@@ -78,6 +78,7 @@ max-height: 2500px;
     transform-style: preserve-3d;
     transition: transform 1s;
     margin-top: 10px;
+
 }
 
 .scena:hover .tarjeta{
@@ -94,7 +95,7 @@ max-height: 2500px;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    border: 1px solid #fdd700;
+    border: 2px solid #e67e22;
     border-radius: 10px;
     margin-top: 20px;
 }
