@@ -1,0 +1,285 @@
+ /* ============================================================
+   IMPORTS (conectados al HTML)
+   - Poppins se aplica a todo el documento (ver <body>).
+   - Font Awesome se usa en los <i class="fa-solid ..."> dentro del <h2>.
+   HTML relacionado:
+     <head>
+       <link rel="stylesheet" href="CSS/style.css">
+     </head>
+     <h2>
+       <i class="fa-solid fa-right-to-bracket"></i>
+       Login
+       <i class="fa-solid fa-heart"></i>
+     </h2>
+============================================================ */
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+/* ============================================================
+   BODY (envoltorio general de la página)
+   HTML objetivo: <body> … </body>
+   - Centra el bloque .box vertical y horizontalmente a pantalla completa.
+   - Color de fondo global.
+============================================================ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f0fe8;
+}
+
+/* ============================================================
+   TIPOGRAFÍA GLOBAL
+   HTML objetivo: * (todo el documento)
+   - Aplica Poppins a todos los elementos del HTML.
+============================================================ */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================================================
+   PROPIEDAD PERSONALIZADA --a (ángulo de gradiente)
+   HTML relacionado: se usa en .box y .box::before (ver abajo).
+   - Permite animar suavemente el ángulo del gradiente cónico.
+============================================================ */
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ============================================================
+   CONTENEDOR PRINCIPAL .box
+   HTML objetivo: <div class="box"> … </div>
+   - Es la tarjeta visible que rodea el formulario.
+   - Usa repeating-conic-gradient que "gira" según --a.
+   - Centra el contenido interno (.login).
+============================================================ */
+.box {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #ff2770 0%,
+    #ff2770 5%,
+    transparent 5%,
+    transparent 40%,
+    #ff2770 50%
+  );
+  filter: drop-shadow(0 15px 50px #e80f0f);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite; /* actualiza --a (ver keyframes) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s; /* suaviza cambio de tamaño en :hover */
+}
+
+/* ============================================================
+   ANIMACIÓN rotating (CORREGIDO 100% en lugar de 0%)
+   HTML relacionado: afecta a .box, .box::before (ambas animan --a).
+============================================================ */
+@keyframes rotating {
+  0%   { --a: 0deg; }
+  100% { --a: 360deg; }
+}
+
+/* ============================================================
+   CAPA SUPERIOR DECORATIVA .box::before
+   HTML objetivo: pseudo-elemento de <div class="box">
+   - Segundo gradiente cónico con desfase en el tiempo.
+   - Crea el efecto visual "neón" en movimiento sobre la tarjeta.
+============================================================ */
+.box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #33e610 0%,
+    #45f3ff 5%,
+    transparent 5%,
+    transparent 40%,
+    #45f3ff 50%
+  );
+  filter: drop-shadow(0 15px 50px #000);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite;
+  animation-delay: -1s; /* comienza antes para desalinear el patrón con .box */
+}
+
+/* ============================================================
+   CAPA INTERIOR/MARCO .box::after
+   HTML objetivo: pseudo-elemento de <div class="box">
+   - Marco interno donde se apoya el contenedor .login.
+============================================================ */
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #2d2d39;
+  border-radius: 15px;
+  border: 8px solid #25252b;
+}
+
+/* ============================================================
+   INTERACCIÓN: HOVER EN .box
+   HTML objetivo: <div class="box"> (al pasar el mouse)
+   - Amplía la tarjeta para dar más “espacio” al formulario.
+============================================================ */
+.box:hover {
+  width: 450px;
+  height: 500px;
+}
+
+/* ============================================================
+   CONTENEDOR DEL FORMULARIO .login
+   HTML objetivo: <div class="box"> > <div class="login"> … </div>
+   - Panel translúcido que contiene .loginBx (el formulario).
+   - En hover de .box se reduce el inset para aprovechar más área.
+============================================================ */
+.box:hover .login {
+  inset: 40px; /* (antes 60px) ver regla base de .login */
+}
+
+.login {
+  position: absolute;
+  inset: 60px; /* margen interno respecto al borde de .box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #00000033;   /* negro 20% */
+  color: #fff;
+  z-index: 1000;           /* por encima de .box::after */
+  box-shadow: inset 0 10px 20px #00000080;
+  border-bottom: 2px solid #ffffff80;
+  transition: 0.5s;        /* suaviza el cambio de inset en hover */
+  overflow: hidden;        /* oculta el desplazamiento inicial de .loginBx */
+}
+
+/* ============================================================
+   CAJA DEL FORMULARIO .loginBx
+   HTML objetivo: <div class="login"> > <div class="loginBx"> … </div>
+   - Contiene <h2>, los <input> y <div class="group">.
+   - Inicia desplazada hacia abajo para efecto "reveal" en hover.
+============================================================ */
+.box:hover .loginBx {
+  transform: translateY(0px); /* aparece al hacer hover en .box */
+}
+
+.loginBx {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  transform: translateY(126px); /* estado inicial oculto hacia abajo */
+  transition: 0.5s;
+}
+
+/* ============================================================
+   TÍTULO DEL FORMULARIO <h2>
+   HTML objetivo: <div class="loginBx"> > <h2> … </h2>
+   - Usa mayúsculas, seminegrita y espaciado de letras.
+============================================================ */
+h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+/* ============================================================
+   ÍCONOS DENTRO DEL TÍTULO <h2> (Font Awesome)
+   HTML objetivo: <h2> > <i class="fa-solid ..."></i>
+   - Color rosa y brillo con text-shadow.
+============================================================ */
+h2 i {
+  color: #ff2770;
+  text-shadow: 0 0 5px #ff2770, 0 0 20px #ff2770;
+}
+
+/* ============================================================
+   CAMPOS DE ENTRADA <input>
+   HTML objetivo (los tres):
+     <input type="text" placeholder="Username">
+     <input type="password" placeholder="Password">
+     <input type="submit" value="Sign in" />
+   - Estilo base para todos los inputs (tamaño, borde, color).
+============================================================ */
+input {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  color: #fff;
+  background: #0000001a;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+/* Placeholder de los inputs de texto/clave
+   HTML objetivo: los <input> con atributo placeholder
+============================================================ */
+input::placeholder {
+  color: #999;
+}
+
+/* ============================================================
+   BOTÓN DE ENVÍO
+   HTML objetivo: <input type="submit" value="Sign in" />
+   - Diferencia visual del botón (fondo celeste, cursor).
+============================================================ */
+input[type="submit"] {
+  background: #45f3ff;
+  border: none;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Hover del botón de envío
+   HTML objetivo: <input type="submit"> (estado hover)
+============================================================ */
+input[type="submit"]:hover {
+  box-shadow: 0 0 10px #45f3ff, 0 0 60px #45f3ff;
+}
+
+/* ============================================================
+   GRUPO DE ENLACES .group (Forgot / Sign up)
+   HTML objetivo:
+     <div class="group">
+       <a href="#">Forgot Password</a>
+       <a href="#">Sign up</a>
+     </div>
+   - Distribuye los dos links a los extremos.
+============================================================ */
+.group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo base de los enlaces dentro de .group
+   HTML objetivo: .group > a
+============================================================ */
+.group a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Resaltado del segundo enlace (Sign up)
+   HTML objetivo: .group > a:nth-child(2) ==> "Sign up"
+============================================================ */
+.group a:nth-child(2) {
+  color: #ff2770;
+  font-weight: 600;
+}
