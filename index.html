@@ -1,34 +1,38 @@
-
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-	<title>Pagína de contactos</title>
-	<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pollería Belgrano - Productos frescos y atención de calidad en Ricardo Rojas, Neuquén. Horarios, productos destacados y contacto.">
+  <title>Pollería Belgrano — Inicio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favicon.ico">
 </head>
-<body> 
+  <body>
+  <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;">Saltar al contenido</a>
+  <header>
   <header>
      <nav>
-         <ul>
              <li><a href="index.html">Inicio</a></li>
-             <li><a href="Productos.html  ">Productos</a></li>
+             <li><a href="Productos.html">Productos</a></li>
              <li><a href="Productos_Apartes.html">Kiosco</a></li>
              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="info-ubicacion.html">Ubicación</a></li>
               <li><a href="info-ubicacion.html">Ubicacion</a></li>
           </ul>
-    </nav>         
+  <div class="principal">
   <div class="principal">
     <img src="img/polleria.jpeg" alt="Edificio" class="img-principal">
    <h1>Polleria Belgrano</h1>
 </div>
-  </header>
 
+  <main class="contenido" id="main">
   <main class="contenido" id="main">
 
     <section class="descripcion lateral-izq">
         <h2>Calidad y Atencion</h2>
          <p>Garantizadas en Pollería Belgrano. Vení y visítanos en <a href="info-ubicacion.html">Ricardo Rojas, Neuquén</a> y encontrá una gran variedad de cortes como pechuga, patas, alitas, medallones y más, siempre listos para que los prepares a tu gusto, en recetas caseras, a la parrilla o al horno. Nuestro compromiso es brindar atención, calidad y precios justos, porque creemos que la buena comida empieza con buenos ingredientes.</p>
     </section>
-    <section class="horrarios lateral-der">
+  <section class="horarios lateral-der" aria-labelledby="horarios-title">
         <h2>Horarios</h2>
         <table border="1">
           <thead>
@@ -81,30 +85,30 @@
       <h2 style="text-align:center;">Productos destacados</h2>
       <div class="grid-prod-dest" style="grid-template-columns: repeat(3, 1fr);">
          <div class="card">
-           <img src="Fotos/pollo entero.jpg" alt="Pollo entero">
+          <img src="Fotos/pollo entero.jpg" alt="Pollo entero entero" loading="lazy">
            <h3>Pollo entero</h3>
            <p>Ideal para asar o cocinar al horno.</p>
            <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
          </div>
          <div class="card">
-           <img src="Fotos/images.jpg" alt="pechuga">
+          <img src="Fotos/images.jpg" alt="Pechuga de pollo" loading="lazy">
            <h3>Pechuga</h3>
            <p>Perfecta para recetas saludables.</p>
            <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
          </div>
          <div class="card">
-           <img src="Fotos/nuggets de pollo.jpg" alt="pechuga">
+          <img src="Fotos/nuggets de pollo.jpg" alt="Nuggets de pollo" loading="lazy">
            <h3>Nuggets de pollo</h3>
            <p>Ideales para los más chicos.</p>
            <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
          </div>
       </div>
     </section>
-</main>
-  </main>    
+  </main>
+    
   <footer style="background:#e67e22;color:#fff;text-align:center;padding:18px 0;margin-top:40px;border-radius:8px 8px 0 0;box-shadow:0 -2px 8px rgba(0,0,0,0.10);">
     <p>&copy; 2025 Pollería Belgrano | Ricardo Rojas, Neuquén | Tel: (299) 123-4567</p>
   </footer>
-</body>
+  </body>
 </html>
 
