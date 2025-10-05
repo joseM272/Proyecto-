@@ -80,3 +80,7 @@ display: block;
 .colum{
     width: 50%;
 }
+.image-container{
+    position: relative;
+    display: inline-block;
+}
