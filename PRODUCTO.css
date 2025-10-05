@@ -133,3 +133,8 @@ perspective: 500px;
 .card__face--front{
     background-color: #e67e22;
 }
+.card__face--back{
+    background-color: #f44336;
+    transform: rotateY(180deg);
+    color:#fff;
+}
