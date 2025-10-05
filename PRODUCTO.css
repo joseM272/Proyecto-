@@ -65,3 +65,7 @@ max-height: 1800px;
 .container2{
     text-align: center;
 }
+.colum{
+    padding: 10px;
+    border: 1px solid black;
+}
