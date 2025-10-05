@@ -77,3 +77,6 @@ display: block;
 .container{
     display: flex;
 }
+.colum{
+    width: 50%;
+}
