@@ -130,3 +130,6 @@ perspective: 500px;
     border-radius: 10px;
     margin-top: 40px;
 }
+.card__face--front{
+    background-color: #e67e22;
+}
