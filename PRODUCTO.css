@@ -147,3 +147,7 @@ perspective: 500px;
 .footer-social{
 color: #f44336;
 }
+.scena:hover .tarjeta{
+    transform: rotateY(180deg);
+    box-shadow: 0 6px 24px rgb(230,126,34,0,18);
+}
