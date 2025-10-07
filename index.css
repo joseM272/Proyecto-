@@ -173,6 +173,25 @@ margin: 40px 0;
     color: #e67e22;
     box-shadow: 0 4px 16px rgba(230,126,34,0.18);
 }
+.container{   
+    column-count: 2;
+    column-gap: 10px;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 15px;
+    max-width: 100px;
+    min-height: 200px;
+    max-height: 250px;
+}
+footer{
+    background:#e67e22;
+    color:#fff;
+    text-align:center;
+    padding:18px 0;
+    margin-top:40px;
+    border-radius:8px 8px 0 0;
+    box-shadow:0 -2px 8px rgba(0,0,0,0.10);
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -196,16 +215,18 @@ margin: 40px 0;
     box-sizing: border-box;
 }
 
+
 /*Productos*/
+.container2{
+    padding-top: 150px;
+    column-count: 2;
+    column-gap: 105px;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 100px;
+    max-width: 700px;
+    min-height: 1800px;
+    max-height: 1800px;
+}
 
 /*Kiosco*/
-.container{   
-column-count: 2;
-column-gap: 10px;
-width: 100%;
-margin: 0 auto;
-min-width: 15px;
-max-width: 100px;
-min-height: 200px;
-max-height: 250px;
-}
