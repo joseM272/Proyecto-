@@ -1,5 +1,6 @@
-
+/*General/Inicio*/
 body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 70px; 
     background-color: #fdd700;
 }
@@ -184,3 +185,30 @@ margin: 40px 0;
 .productos_dest {
   animation: fadeInUp 3s ease;
 }
+
+/*Info Contacto*/
+.ubicacion {
+    background: #fffbe7;
+    border-radius: 12px;
+    padding: 32px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    box-sizing: border-box;
+}
+#titulo{
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(230, 126, 34, 0.85);
+    padding: 5px 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    text-shadow: 2px 2px 8px #000;
+    pointer-events: none;
+}
+
+/*Productos*/
+
+/*Kiosco*/
