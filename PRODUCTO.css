@@ -233,3 +233,10 @@ color: #f44336;
 .productos_dest {
     animation: fadeInUp 3s ease;
 }
+.scena{
+    width: 300px ;
+    height: 300px;
+    perspective: 1000px;
+    margin-top: 10px;
+    padding-top: 60px;
+}
