@@ -213,8 +213,37 @@ footer{
     padding: 25px 25px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     box-sizing: border-box;
+    text-align: center;
 }
 
+#datoscontacto{
+    text-align:center;
+    padding-top: 100px;
+}
+#datoscontacto ul{
+    list-style-type: none;
+}
+.redes{
+    background:#e67e22;
+    color:#fff;
+    text-align:center;
+    margin-top:40px;
+    border-radius:8px 8px 0 0;
+    box-shadow:0 -2px 8px rgba(0,0,0,0.10);
+}
+.redes #facebook{
+    position: relative;
+}
+.redes #whatsapp{
+    position: relative;
+    float: left;
+    transform: translate(300px,-78px);
+}
+.redes #instagram{
+    position: relative;
+    float: right;
+    transform: translate(-300px,-78px);
+}
 
 /*Productos*/
 .container2{
@@ -227,6 +256,30 @@ footer{
     max-width: 700px;
     min-height: 1800px;
     max-height: 1800px;
+}
+.card2{
+    border: 2px solid #000000;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 24px 18px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card2 img{
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+.card3{
+    background: #fffbe7;
+    border: 2px solid #e67e22;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 24px 18px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /*Kiosco*/
