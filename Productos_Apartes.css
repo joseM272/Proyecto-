@@ -147,6 +147,11 @@ margin: 40px 0;
     transform: translateY(-8) scale(1.03);
     box-shadow: 0 6px 24px rgb(230,126,34,0.18);
 }
+
+
+/*Fin de las Tarjetas*/
+
+
 .bt{
     background: #e67e22;
     color: #fff;
