@@ -54,19 +54,20 @@ text-shadow: 0 0 6px #ffd700;
 }
 .container{
 column-count: 2;
-column-gap: 50px;
+column-gap: 105px;
 width: 100%;
 margin: 0 auto;
-min-width: 100px;
-max-width: 700px;
-min-height: 1800px;
-max-height: 1800px;
+min-width: 150px;
+max-width: 1000px;
+min-height: 2000px;
+max-height: 2500px;
+
 }
 .container2{
     text-align: center;
 }
 .colum{
-    padding: 10px;
+    padding: 60px;
     border: 1px solid black;
 }
 .i2{
@@ -149,7 +150,7 @@ color: #f44336;
 }
 .scena:hover .tarjeta{
     transform: rotateY(180deg);
-    box-shadow: 0 6px 24px rgb(230,126,34,0,18);
+    box-shadow: 0 6px 24px rgb(230,126,34,0.18);
 }
 .tarjeta_cara{
     position:absolute;
@@ -158,6 +159,7 @@ color: #f44336;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 24px;
     border: 1px solid #fdd700;
     border-radius: 10px;
@@ -168,6 +170,8 @@ color: #f44336;
 }
 .tarjeta_cara--atras{
     background-color: #e67e22;
+      transform: rotateY(180deg);
+    color: #fdd700;
 }
 .grid-prod-dest{
     display: grid;
