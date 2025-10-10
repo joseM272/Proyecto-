@@ -9,8 +9,9 @@ align-items: center;
 margin-right: 10px;
 margin-bottom: 10px;
 margin: bottom 10px; ;
-
 }
+
+
 p{
     color: #f44336;
 }
@@ -88,6 +89,7 @@ display: block;
 .image-with-text img{
     display: block;
     margin: 0 auto;
+    margin-top: 100px;
 }
 .no-gif, .efecto:hover .gif{
     display: flex;
@@ -97,6 +99,7 @@ display: block;
     width: 150px;
     height: 150px;
     content: center;
+    margin-top: 100px;
 }
 .scene{
   width: 300px;
@@ -153,7 +156,7 @@ color: #f44336;
     box-shadow: 0 6px 24px rgb(230,126,34,0.18);
 }
 .tarjeta_cara{
-    position:absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
@@ -169,18 +172,18 @@ color: #f44336;
     background-color: #fdd700;
 }
 .tarjeta_cara--atras{
-    background-color: #e67e22;
-      transform: rotateY(180deg);
+     background-color: #e67e22;
+    transform: rotateY(180deg);
     color: #fdd700;
 }
 .grid-prod-dest{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 32px;
-    margin: 40px 0;
+   display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 32px;
+margin: 40px 0;
 }
 .card{
-    background: #fffbe7;
+     background: #fffbe7;
     border: 2px solid #e67e22;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -196,19 +199,19 @@ color: #f44336;
     border-radius: 8px;
 }
 .card h3{
-    color: #e67e22;
+   color: #e67e22;
     margin-bottom: 8px;
 }
 .card p{
     color: #333;
-    margin-bottom: 16px;
+    margin-bottom: 16PX;
 }
 .card:hover{
     transform: translateY(-8) scale(1.03);
     box-shadow: 0 6px 24px rgb(230,126,34,0.18);
 }
 .bt{
-    background: #e67e22;
+   background: #e67e22;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -217,25 +220,17 @@ color: #f44336;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10)
 }
 .bt:hover{
     background: #ffd700;
     color: #e67e22;
     box-shadow: 0 4px 16px rgba(230,126,34,0.18);
 }
-@keyframes fadeInUp{
-    from{
-        opacity: 1;
-    transform: translateY(0);
-}
-     to{
-       opacity: 1;
-       transform: translateY(0);
- }
-}
+
+
 .productos_dest {
-    animation: fadeInUp 3s ease;
+     animation: fadeInUp 3s ease;
 }
 .scena{
     width: 300px ;
@@ -245,10 +240,18 @@ color: #f44336;
     padding-top: 60px;
 }
 .tarjeta{
-    width: 100%;
+   width: 100%;
     height: 100%;
     position:relative;
     transform-style: preserve-3d;
     transition: transform 1s;
     margin-top: 10px;
+}
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.contenido-inferior{
+    margin-top: auto;
 }
