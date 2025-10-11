@@ -173,15 +173,13 @@ margin: 40px 0;
     color: #e67e22;
     box-shadow: 0 4px 16px rgba(230,126,34,0.18);
 }
-.container{   
-    column-count: 2;
-    column-gap: 10px;
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     width: 100%;
-    margin: 0 auto;
-    min-width: 15px;
-    max-width: 100px;
-    min-height: 200px;
-    max-height: 250px;
+    margin: 120px auto 0; /* dejar espacio para el nav fijo */
+    max-width: 1200px;
 }
 footer{
     background:#e67e22;
