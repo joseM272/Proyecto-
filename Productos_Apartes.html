@@ -204,15 +204,14 @@
             <p> &copy; 2025 Pollería Belgrano | Ricardo Rojas, Neuquén | Tel: (299) 123-4567</p>
         </footer>
                 <script>
-                    // Touch / keyboard support: tap or press Enter/Space to toggle flip
                     (function(){
                         var tarjetas = document.querySelectorAll('.tarjeta');
                         tarjetas.forEach(function(t){
-                            // Toggle on click/touch
+                            
                             t.addEventListener('click', function(e){
                                 t.classList.toggle('is-flipped');
                             });
-                            // Keyboard support
+                            
                             t.addEventListener('keydown', function(e){
                                 if (e.key === 'Enter' || e.key === ' '){
                                     e.preventDefault();
