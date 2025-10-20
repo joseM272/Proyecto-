@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="h"> productos la polleria</h1>
+        <h1 class="h">¿Algun problema? ¡Contactanos!</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -16,8 +16,25 @@
                 <li><a href="index_contac.html">Contacto</a></li>
                  <li><a href="info-ubicacion.html">Ubicacion</a></li>
             </ul>
-        </nav> 
-        <img  class="i2" src="imagenes santi/marca posision.png" alt="si">
+        </nav>
+
+        <main>
+            <h2>contactos</h2>
+              <form class="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+        
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu mensaje..." required></textarea>
+        
+                <input type="submit" value="Enviar">
+                <div id="mensaje-enviado">¡Gracias por tu mensaje!</div>
+              </form>
+          </main>
+<!--        <img  class="i2" src="imagenes santi/marca posision.png" alt="si">-->
     </body>
 
     <footer style="background:#e67e22;color:#fff;text-align:center;padding:18px 0;margin-top:40px;border-radius:8px 8px 0 0;box-shadow:0 -2px 8px rgba(0,0,0,0.10);">
