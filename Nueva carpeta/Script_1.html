@@ -3,23 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device_width, initial-scale=1.0">
-        <title>Direccion</title>
+        <title>Quinto cuarta</title>
     </head>
     <body>
         <input id="texto" placeholder="Etiqueta">
         <button id="btn-add">Agregar</button>
-        <div id="tags">
+
+        <div id="tags"></div>
+
+
         </div>
         <script>
             document.getElementById('btn-add').addEventListener('click', ()=>{
                 const texto = document.getElementById('texto').value.trim();
                 if(!texto) return;
 
-                const tag =document.createElement('h4');
-                tag.className='etiquetah4';
-                tag.textContent=texto;
+                const tag1 =document.createElement('h4');
+                tag1.className='etiquetah4';
+                tag1.textContent=texto;
 
-                document.getElementById('tags').appendChild(tag);
+                const texto2 = document.getElementById('texto').value.trim();
+                if(!texto) return;
+
+                const tag2 =document.createElement('h3');
+                tag2.className='etiquetah3';
+                tag2.textContent=texto;
+
+                const texto3 = document.getElementById('texto').value.trim();
+                if(!texto) return;
+
+                const tag3 =document.createElement('h2');
+                tag3.className='etiquetah2';
+                tag3.textContent=texto;
+
+                const texto4 = document.getElementById('texto').value.trim();
+                if(!texto) return;
+                const tag4 =document.createElement('h1');
+                tag4.className='etiquetah1';
+                tag4.textContent=texto;
+
+                document.getElementById('tags').appendChild(tag1);
+                document.getElementById('tags').appendChild(tag2);
+                document.getElementById('tags').appendChild(tag3);
+                document.getElementById('tags').appendChild(tag4);
                 document.getElementById('texto').value='';
             })
         </script>
