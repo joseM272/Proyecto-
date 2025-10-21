@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width, initial-scale=1.0">
+        <title>Direccion</title>
+    </head>
+    <body>
+        <input id="texto" placeholder="Etiqueta">
+        <button id="btn-add">Agregar</button>
+        <div id="tags">
+        </div>
+        <script>
+            document.getElementById('btn-add').addEventListener('click', ()=>{
+                const texto = document.getElementById('texto').value.trim();
+                if(!texto) return;
+
+                const tag =document.createElement('h4');
+                tag.className='etiquetah4';
+                tag.textContent=texto;
+
+                document.getElementById('tags').appendChild(tag);
+                document.getElementById('texto').value='';
+            })
+        </script>
+    </body>
+</html>
