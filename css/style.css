@@ -134,9 +134,9 @@ margin: 40px 0;
 .producto img { display:block; width:100%; height:100%; object-fit: cover; }
 .producto figcaption { padding: 8px 10px; font-weight: bold; background: rgba(255,255,255,0.92); color:#e67e22; border-top:1px solid rgba(0,0,0,0.04); }
 
-/* Ajuste de columnas usadas en Productos_Apartes */
-.colum { display: grid; grid-template-columns: 1fr; gap: 18px; }
-.colum .scena { max-width: 360px; margin: 0 auto; }
+/* Ajuste de columnas usadas en Productos_Apartes: cada .colum ocupa su celda y apila tarjetas */
+.colum { display: flex; flex-direction: column; gap: 18px; align-items: stretch; }
+.colum .scena { max-width: none; margin: 0; width: 100%; }
 .card{
     background: #fffbe7;
     border: 2px solid #e67e22;
@@ -185,12 +185,16 @@ margin: 40px 0;
 }
 .container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* dos columnas explícitas */
+    grid-auto-rows: auto;
+    gap: 30px;
     width: 100%;
     margin: 120px auto 0; /* dejar espacio para el nav fijo */
     max-width: 1200px;
+    align-items: start;
 }
+/* Cada columna debe ocupar su celda de la grid */
+.container > .colum { width: 100%; min-width: 0; }
 /* Responsive: una columna en pantallas pequeñas */
 @media (max-width: 900px) {
     .container { grid-template-columns: 1fr; margin: 140px 16px 0; }
