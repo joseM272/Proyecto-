@@ -427,6 +427,10 @@ body.tema-oscuro .horrarios th {
     color: #ffd700 !important;
 }
 
+body.tema-oscuro .horrarios tr:nth-child(even) {
+    background: #283548 !important;
+}
+
 
 
 
