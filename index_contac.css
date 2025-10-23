@@ -61,7 +61,16 @@ background: #fff;
 text-shadow: 0 0 6px #ffd700;
 }
 
+
+.formulario:hover{
+    transform: scale(1.1);
+}
 .formulario {
+    display: flex;
+    flex-direction: column; /* Establece que los elementos del formulario se alineen verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    background-color: #ffcc00; /* Fondo amarillo */
+
     max-width: 500px;
     margin: 2rem auto;
     background: #ffb522;
@@ -70,6 +79,35 @@ text-shadow: 0 0 6px #ffd700;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.formulario:hover{
-    transform: scale(1.1);
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%; /* Asegura que los campos llenen todo el ancho disponible */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario input[type="submit"] {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+#mensaje-enviado {
+    display: none;
+    color: green;
+    font-weight: bold;
 }
