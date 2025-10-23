@@ -379,3 +379,13 @@ body.tema-oscuro .titulo {
     background: rgba(31, 41, 55, 0.95) !important;
     color: #fff !important;
 }
+
+body.tema-oscuro .lateral-izq,
+body.tema-oscuro .lateral-der,
+body.tema-oscuro .card {
+    background: #1f2937 !important;
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
