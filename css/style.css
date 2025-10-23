@@ -375,4 +375,7 @@ body.tema-oscuro {
 body.tema-oscuro nav {
     background-color: #1f2937 !important;
 }
-
+body.tema-oscuro .titulo {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #fff !important;
+}
