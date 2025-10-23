@@ -409,6 +409,9 @@ body.tema-oscuro .bt:hover {
     background: #4b5563 !important;
     color: #fff !important;
 }
+body.tema-oscuro nav ul li a {
+    color: #e5e7eb !important;
+}
 
 
 
