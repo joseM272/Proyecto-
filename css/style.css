@@ -431,6 +431,9 @@ body.tema-oscuro .horrarios tr:nth-child(even) {
     background: #283548 !important;
 }
 
+/* Transiciones suave para cambios de tema */
+body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
+
 
 
 
