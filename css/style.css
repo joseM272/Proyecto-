@@ -371,3 +371,8 @@ body.tema-oscuro {
     background-color: #121212 !important;
     color: #e6e6e6 !important;
 }
+
+body.tema-oscuro nav {
+    background-color: #1f2937 !important;
+}
+
