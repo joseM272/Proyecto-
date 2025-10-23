@@ -405,6 +405,11 @@ body.tema-oscuro .bt {
     background: #374151 !important;
     color: #ffd700 !important;
 }
+body.tema-oscuro .bt:hover {
+    background: #4b5563 !important;
+    color: #fff !important;
+}
+
 
 
 
