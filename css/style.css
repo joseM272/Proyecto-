@@ -393,3 +393,7 @@ body.tema-oscuro .card h3 {
     color: #ffd700 !important;
 }
 
+body.tema-oscuro .card p {
+    color: #e5e7eb !important;
+}
+
