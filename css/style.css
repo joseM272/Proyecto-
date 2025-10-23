@@ -422,6 +422,10 @@ body.tema-oscuro .horrarios table {
     background: #1f2937 !important;
     color: #e5e7eb !important;
 }
+body.tema-oscuro .horrarios th {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
 
 
 
