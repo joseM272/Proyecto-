@@ -401,5 +401,10 @@ body.tema-oscuro footer {
     background: #1f2937 !important;
     color: #e5e7eb !important;
 }
+body.tema-oscuro .bt {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+
 
 
