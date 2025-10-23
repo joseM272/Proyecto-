@@ -433,7 +433,8 @@ body.tema-oscuro .horrarios tr:nth-child(even) {
 
 /* Transiciones suave para cambios de tema */
 body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
-
+    transition: all 0.3s ease-in-out !important;
+}
 
 
 
