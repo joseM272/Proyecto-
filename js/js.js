@@ -1,27 +1,32 @@
 
-console.log("Cierren bien las etiquetas");
-console.warn("");
-console.error("");
-console.debug(document);
-console.info(document);
-console.trace(document);
+console.log("Inicializando sistema de tema");
+
 const temaOscuro = () => {
-    document.querySelector("body").setAttribute("data-bs-theme", "dark");
-    document.querySelector("#dl-icon").setAttribute("class", "bi bi-sun-fill");
+    document.body.classList.add('tema-oscuro');
+    document.querySelector('#dl-icon').className = 'bi bi-sun-fill';
+    localStorage.setItem('tema', 'oscuro');
 }
 
 const temaClaro = () => {
-    document.querySelector("body").setAttribute("data-bs-theme", "light");
-    document.querySelector("#dl-icon").setAttribute("class", "bi bi-moon-fill");
+    document.body.classList.remove('tema-oscuro');
+    document.querySelector('#dl-icon').className = 'bi bi-moon-fill';
+    localStorage.setItem('tema', 'claro');
 }
 
 const cambiarTema = () => {
-    // Si el tema actual es 'dark', cambiar a claro; si no, cambiar a oscuro
-    const cuerpo = document.querySelector("body");
-    const temaActual = cuerpo.getAttribute("data-bs-theme");
-    if (temaActual === "dark") {
+    if (document.body.classList.contains('tema-oscuro')) {
         temaClaro();
     } else {
         temaOscuro();
     }
 }
+
+// Aplicar tema guardado al cargar
+document.addEventListener('DOMContentLoaded', () => {
+    const preferencia = localStorage.getItem('tema');
+    if (preferencia === 'oscuro') {
+        temaOscuro();
+    } else {
+        temaClaro();
+    }
+});

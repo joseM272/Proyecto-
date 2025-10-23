@@ -365,3 +365,9 @@ footer{
 }
 
 /*Kiosco*/
+
+/* Tema oscuro */
+body.tema-oscuro {
+    background-color: #121212 !important;
+    color: #e6e6e6 !important;
+}
