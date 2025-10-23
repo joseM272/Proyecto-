@@ -68,7 +68,7 @@ max-height: 2500px;
 }
 .colum{
     padding: 60px;
-    border: 1px solid black;
+    border: 1px solid #fdd700;
 }
 .i2{
 width: 320px;
@@ -168,12 +168,15 @@ color: #f44336;
     margin-top: 20px;
 }
 .tarjeta_cara--frente{
-    background-color: red;
+    background-color: #fdd700;
 }
 .tarjeta_cara--atras{
      background-color: #e67e22;
     transform: rotateY(180deg);
     color: #fdd700;
+}
+.tarjeta_cara--frente1{
+    background-color: red;
 }
 .grid-prod-dest{
    display: grid;
