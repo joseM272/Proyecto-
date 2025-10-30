@@ -391,7 +391,10 @@ body.tema-oscuro .titulo {
     background: rgba(31, 41, 55, 0.95) !important;
     color: #fff !important;
 }
-
+body.tema-oscuro .titulo2 {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #fff !important;
+}
 body.tema-oscuro .lateral-izq,
 body.tema-oscuro .lateral-der,
 body.tema-oscuro .card {
