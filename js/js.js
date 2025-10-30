@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 anime({
- targets: '.scena',
+ targets: '#explosion',
   scale: [1, 10], // Expande rápidamente
   opacity: [1, 0],
   duration: 200,
