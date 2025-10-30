@@ -103,6 +103,14 @@ nav ul li a:hover {
     margin: 0 auto;
     padding: 40px 0;
 }
+
+/* Aumentar tamaño del título de la sección "Calidad y Atencion" */
+.descripcion h2 {
+    font-size: 2.2rem; /* más grande */
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #e67e22; /* mantiene la paleta del sitio */
+}
 .lateral-izq {
     flex: 1 1 55%;
     background: #fffbe7;
@@ -377,6 +385,23 @@ footer{
 }
 
 /*Kiosco*/
+
+/* Control de orden visual de secciones
+     - Usamos flexbox order para cambiar posición sin tocar el HTML
+     - `.contenido` ya es flex; ajustamos el orden de los hijos
+*/
+.contenido { display: flex; flex-wrap: wrap; }
+.descripcion { order: 1; /* calidad y atencion */ }
+.horrarios { order: 2; /* horarios */ }
+.productos_dest { order: 3; width: 100%; /* productos destacados, ocupa toda la fila */ }
+
+/* Responsive: en pantallas pequeñas queremos apilar y opcionalmente mostrar Productos primero */
+@media (max-width: 900px) {
+    .productos_dest { order: 1; }
+    .descripcion { order: 2; width: 100%; }
+    .horrarios { order: 3; width: 100%; }
+}
+
 
 /* Tema oscuro */
 body.tema-oscuro {
