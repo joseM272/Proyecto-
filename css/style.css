@@ -341,10 +341,6 @@ footer{
     background: #e67e22;
     color: #fff;
     transform: rotateY(180deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
 }
 
 .tarjeta:hover, .tarjeta.is-flipped {
@@ -355,7 +351,7 @@ footer{
 .tarjeta_cara--atras h2{ margin:0; font-size:1.1rem; line-height:1.2; text-align:center }
 
 
-.scena { margin-bottom: 20px; }
+
 
 .grid-prod-dest .card img {
   height: 160px;
