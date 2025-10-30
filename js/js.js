@@ -30,4 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
         temaClaro();
     }
 });
-ani
+anime({
+ targets: '.scena',
+  scale: [1, 10], // Expande rápidamente
+  opacity: [1, 0],
+  duration: 200,
+  easing: 'easeOutElastic',
+  complete: function() {
+    // Iniciar la secuela después de la explosión principal
+    animateDebris();
+  } 
+});
+function animateDebris() {
+  const debris = document.querySelectorAll('.debris');
+  debris.forEach((el, index) => {
+    anime({
+      targets: el,
+      translateX: anime.random(-200, 200),
+      translateY: anime.random(-100, 100),
+      scale: anime.random(0.5, 2),
+      opacity: [1, 0],
+      duration: anime.random(1000, 3000),
+      easing: 'easeOutQuart',
+      delay: index * 100
+    });
+  });
+}   
