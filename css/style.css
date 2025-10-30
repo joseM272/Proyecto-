@@ -303,42 +303,40 @@ footer{
 
 /* Tarjetas (kiosco) */
 .scena {
+    width: 200px;
+    height: 300px;
     perspective: 1000px;
-    margin-bottom: 20px;
 }
 .tarjeta {
     width: 100%;
-    height: 320px;
+    height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.8s;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    overflow: hidden;
+    transition: transform 1s;
 }
 .tarjeta_cara {
-    position: absolute;
-    top: 0;
-    left: 0;
+   position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 12px;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #999;
+    border-radius: 10px;
 }
 .tarjeta_cara--frente {
-    display: block;
     background: #fff;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
 }
 .tarjeta_cara--frente img { 
     width: 100%; 
     height: 100%; 
     object-fit: cover;
     display: block;
-    border-radius: 0; }
+    border-radius: 0; 
+}
+
 .tarjeta_cara--atras {
     background: #e67e22;
     color: #fff;
