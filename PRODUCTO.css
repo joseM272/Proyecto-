@@ -109,8 +109,16 @@ body.tema-oscuro .tarjeta_cara--frente{
 body.tema-oscuro .colum{
     border: 1px solid #121212 !important;
 }
-
-
+body.tema-oscuro .footer-info{
+    background-color: #374151 !important;
+    border: 2px solid #121212 !important;
+}
+body.tema-oscuro .footer-social{
+    color: #373737 !important;
+}
+body.tema-oscuro .tarjeta_cara--frente1{
+    background-color: #373737 !important;
+} 
 /* Transiciones suave para cambios de tema */
 body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
     transition: all 0.3s ease-in-out !important;
