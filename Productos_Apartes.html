@@ -203,8 +203,8 @@
                             });
                         });
                     })();
-                    function animateText(h2) {
-                        let text = h2.value;
+                    function animateText(p) {
+                        let text = p.value;
                         let to = text.length,
                         from = 0;
 
@@ -213,7 +213,7 @@
                         timing: bounce,
                         draw: function(progress) {
                         let result = (to - from) * progress + from;
-                        h2.value = text.slice(0, Math.ceil(result))
+                        p.value = text.slice(0, Math.ceil(result))
                             }
                         });
                     }
