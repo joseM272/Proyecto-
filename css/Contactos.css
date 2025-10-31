@@ -84,3 +84,77 @@ header h1 {
     color: #e67e22;
     box-shadow: 0 4px 16px rgba(230,126,34,0.18);
 }
+
+/* */
+
+body.tema-oscuro {
+    background-color: #121212 !important;
+    color: #e6e6e6 !important;
+}
+
+body.tema-oscuro nav {
+    background-color: #1f2937 !important;
+}
+body.tema-oscuro .titulo {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #fff !important;
+}
+body.tema-oscuro .titulo2 {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #fff !important;
+}
+    body.tema-oscuro .lateral-izq,
+    body.tema-oscuro .lateral-der,
+    body.tema-oscuro .card {
+    background: #1f2937 !important;
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.tema-oscuro .card h3 {
+    color: #ffd700 !important;
+}
+
+body.tema-oscuro .card p {
+    color: #e5e7eb !important;
+}
+
+body.tema-oscuro footer {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+body.tema-oscuro .bt {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+body.tema-oscuro .bt:hover {
+    background: #4b5563 !important;
+    color: #fff !important;
+}
+body.tema-oscuro nav ul li a {
+    color: #e5e7eb !important;
+}
+
+body.tema-oscuro nav ul li a:hover {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+
+body.tema-oscuro .horrarios table {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+body.tema-oscuro .horrarios th {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+
+body.tema-oscuro .horrarios tr:nth-child(even) {
+    background: #283548 !important;
+}
+
+/* Transiciones suave para cambios de tema */
+body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
+    transition: all 0.3s ease-in-out !important;
+}
