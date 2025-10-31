@@ -77,6 +77,7 @@ header h1 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     margin-right: 35px;
     display: inline-block;
+    border-radius: 8px;
 }
 
 .btn:hover {
@@ -155,7 +156,7 @@ body.tema-oscuro .horrarios tr:nth-child(even) {
 }
 
 /* Transiciones suave para cambios de tema */
-body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
+body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .btn {
     transition: all 0.3s ease-in-out !important;
 }
 
