@@ -66,8 +66,7 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-
-.titulo{
+.titulo2{
     text-align: center;
     position: absolute;
     top: 100px;
@@ -75,7 +74,21 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     color: #fff;
     background: rgba(230, 126, 34, 0.85);
-    padding: 5px 40px;
+    padding: 15px 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    text-shadow: 2px 2px 8px #000;
+    pointer-events: none;
+}
+.titulo{
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(230, 126, 34, 0.85);
+    padding: 15px 40px;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     text-shadow: 2px 2px 8px #000;
@@ -89,6 +102,14 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 0;
+}
+
+/* Aumentar tamaño del título de la sección "Calidad y Atencion" */
+.descripcion h2 {
+    font-size: 2.2rem; /* más grande */
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #e67e22; /* mantiene la paleta del sitio */
 }
 .lateral-izq {
     flex: 1 1 55%;
@@ -128,6 +149,15 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 32px;
 margin: 40px 0;
 }
+
+/* Estilos para figuras de producto */
+.producto { display: block; width: 100%; height: 100%; text-align: center; background: #fff; }
+.producto img { display:block; width:100%; height:100%; object-fit: cover; }
+.producto figcaption { padding: 8px 10px; font-weight: bold; background: rgba(255,255,255,0.92); color:#e67e22; border-top:1px solid rgba(0,0,0,0.04); }
+
+/* Ajuste de columnas usadas en Productos_Apartes: cada .colum ocupa su celda y apila tarjetas */
+.colum { display: flex; flex-direction: column; gap: 18px; align-items: stretch; }
+.colum .scena { max-width: none; margin: 0; width: 100%; }
 .card{
     background: #fffbe7;
     border: 2px solid #e67e22;
@@ -139,9 +169,10 @@ margin: 40px 0;
 }
 .card img{
     width: 100%;
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 16px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
     border-radius: 8px;
 }
 .card h3{
@@ -153,8 +184,8 @@ margin: 40px 0;
     margin-bottom: 16PX;
 }
 .card:hover{
-    transform: translateY(-8) scale(1.03);
-    box-shadow: 0 6px 24px rgb(230,126,34,0.18);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(230,126,34,0.18);
 }
 .bt{
     background: #e67e22;
@@ -173,15 +204,22 @@ margin: 40px 0;
     color: #e67e22;
     box-shadow: 0 4px 16px rgba(230,126,34,0.18);
 }
-.container{   
-    column-count: 2;
-    column-gap: 10px;
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas explícitas */
+    grid-auto-rows: auto;
+    gap: 30px;
     width: 100%;
-    margin: 0 auto;
-    min-width: 15px;
-    max-width: 100px;
-    min-height: 200px;
-    max-height: 250px;
+    margin: 120px auto 0; /* dejar espacio para el nav fijo */
+    max-width: 1200px;
+    align-items: start;
+}
+/* Cada columna debe ocupar su celda de la grid */
+.container > .colum { width: 100%; min-width: 0; }
+/* Responsive: una columna en pantallas pequeñas */
+@media (max-width: 900px) {
+    .container { grid-template-columns: 1fr; margin: 140px 16px 0; }
+    .contenido { flex-direction: column; padding: 20px 12px; }
 }
 footer{
     background:#e67e22;
@@ -268,9 +306,10 @@ footer{
 }
 .card2 img{
     width: 100%;
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 16px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
     border-radius: 8px;
 }
 .card3{
@@ -283,4 +322,160 @@ footer{
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Tarjetas (kiosco) */
+.scena {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+.tarjeta {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.tarjeta_cara {
+   position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+.tarjeta_cara--frente {
+    background: #fff;
+}
+.tarjeta_cara--frente img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+    border-radius: 0; 
+}
+
+.tarjeta_cara--atras {
+    background: #e67e22;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.tarjeta:hover, .tarjeta.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+.tarjeta_cara--atras h2{ margin:0; font-size:1.1rem; line-height:1.2; text-align:center }
+
+
+
+
+.grid-prod-dest .card img {
+  height: 160px;
+  object-fit: cover;
+}
+
+
+@media (hover: none) {
+  .tarjeta:hover { transform: none; }
+}
+
 /*Kiosco*/
+
+/* Control de orden visual de secciones
+     - Usamos flexbox order para cambiar posición sin tocar el HTML
+     - `.contenido` ya es flex; ajustamos el orden de los hijos
+*/
+.contenido { display: flex; flex-wrap: wrap; }
+.descripcion { order: 1; /* calidad y atencion */ }
+.horrarios { order: 2; /* horarios */ }
+.productos_dest { order: 3; width: 100%; /* productos destacados, ocupa toda la fila */ }
+
+/* Responsive: en pantallas pequeñas queremos apilar y opcionalmente mostrar Productos primero */
+@media (max-width: 900px) {
+    .productos_dest { order: 1; }
+    .descripcion { order: 2; width: 100%; }
+    .horrarios { order: 3; width: 100%; }
+}
+
+
+/* Tema oscuro */
+body.tema-oscuro {
+    background-color: #121212 !important;
+    color: #e6e6e6 !important;
+}
+
+body.tema-oscuro nav {
+    background-color: #1f2937 !important;
+}
+body.tema-oscuro .titulo {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #fff !important;
+}
+body.tema-oscuro .titulo2 {
+    background: rgba(31, 41, 55, 0.95) !important;
+    color: #fff !important;
+}
+body.tema-oscuro .lateral-izq,
+body.tema-oscuro .lateral-der,
+body.tema-oscuro .card {
+    background: #1f2937 !important;
+    border-color: #374151 !important;
+    color: #e5e7eb !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.tema-oscuro .card h3 {
+    color: #ffd700 !important;
+}
+
+body.tema-oscuro .card p {
+    color: #e5e7eb !important;
+}
+
+body.tema-oscuro footer {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+body.tema-oscuro .bt {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+body.tema-oscuro .bt:hover {
+    background: #4b5563 !important;
+    color: #fff !important;
+}
+body.tema-oscuro nav ul li a {
+    color: #e5e7eb !important;
+}
+
+body.tema-oscuro nav ul li a:hover {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+
+body.tema-oscuro .horrarios table {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+body.tema-oscuro .horrarios th {
+    background: #374151 !important;
+    color: #ffd700 !important;
+}
+
+body.tema-oscuro .horrarios tr:nth-child(even) {
+    background: #283548 !important;
+}
+
+/* Transiciones suave para cambios de tema */
+body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
+    transition: all 0.3s ease-in-out !important;
+}
+
+
+
+

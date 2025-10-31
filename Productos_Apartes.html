@@ -1,12 +1,16 @@
 <html>
     <head>
         <link rel = "stylesheet" href="css/style.css"> 
+        <script src=" node_modules/animejs/lib/anime.min.js"></script>
+        <link rel = "stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
         <title>Productos apartes de la polleria</title>
 
     </head>
     <body>
         <nav>
            <ul>
+            <button onclick="cambiarTema()" class="btn rounded-pill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
              <li><a href="index.html">Inicio</a></li>
              <li><a href="Productos.html  ">Productos</a></li>
              <li><a href="Productos_Apartes.html">Kiosco</a></li>
@@ -14,38 +18,194 @@
              </ul>
         </nav>
         
-        <h1 class="titulo"> Productos extras que ofrece la polleria Belgrano</h1>
-        <div class="container">
+        <h1 class="titulo2"> Productos extras que ofrece la polleria Belgrano</h1>
+          <div class="container">
             <div class="colum">
-
+                <div class="scena">
+                    <div class="tarjeta" role="button" tabindex="0">
+                        <div class="tarjeta_cara tarjeta_cara--frente">                            
+                              <img class="i2" src="Fotos/flauta.png" alt="Flauta - Pan" loading="lazy">
+                              <figcaption>Flauta · $2000</figcaption>
+                         </div>
+                         <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>El kilo de pan está $2000</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="scena">
+                    <div class="tarjeta" role="button" tabindex="0">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                              <img class="i2" src="Fotos/Mayonesa natura.png" alt="Mayonesa Natura" loading="lazy">
+                              <figcaption>Mayonesa Natura · $3000</figcaption>
+                        </div>
+                        <div class="tarjeta_cara tarjeta_cara--atras">  
+                            <h2>La mayonesa esta $3000 </h2>
+                        </div> 
+                    </div>    
+                </div>
+                <div class="scena">
+                    <div class="tarjeta" role="button" tabindex="0">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                              <img class="i2" src="Fotos/tomate cubetado.png" alt="Tomate cubetado" loading="lazy">
+                              <figcaption>Tomate cubetado · $2500</figcaption>
+                        </div>
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>El tomate está $2500</h2>
+                        </div>
+                    </div>    
+                </div>
+                <div class="scena">
+                    <div class="tarjeta" role="button" tabindex="0">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                                <img class="i2" src="Fotos/Sprite 3l.png" alt="Sprite 3l" loading="lazy">
+                                <figcaption>Sprite 3l · $4500</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>La sprite esta $4500 </h2>
+                        </div> 
+                    </div>    
+                </div>
+                <div class="scena">
+                    <div class="tarjeta" role="button" tabindex="0">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                                <img class="i2" src="Fotos/huevos.png" alt="Huevos - Cartón" loading="lazy">
+                                <figcaption>Cartón de huevos · $4000</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>El carton de huevos esta $4000 </h2>
+                        </div> 
+                    </div>    
+                </div>
+                <div class="scena">
+                    <div class="tarjeta" role="button" tabindex="0">
+                        <div class="tarjeta_cara tarjeta_cara--frente">                         
+                            <img class="i2" src="Fotos/Fideos largos.png" alt="Fideos largos" loading="lazy">
+                            <figcaption>Fideos largos · $3000</figcaption>                            
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>Los fideos estan $3000</h2>
+                        </div> 
+                    </div>    
+                </div>     
+            </div>
+            <div class="colum">
+                <div class="scena">
+                    <div class="tarjeta">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                              <img class="i2" src="Fotos/condimentos.png" alt="Condimentos" loading="lazy">
+                              <figcaption>Condimentos · $1500</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>Los condimentos $1500</h2>
+                        </div>
+                    </div>    
+                </div> 
+                <div class="scena">
+                    <div class="tarjeta">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                            <img class="i2" src="Fotos/Manaos.png" alt="Manaos" loading="lazy">
+                            <figcaption>Manaos · $4000</figcaption> 
+                        </div>
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>La Manaos está $4000</h2>
+                        </div>
+                    </div>    
+                </div> 
+                <div class="scena">
+                    <div class="tarjeta">
+                        <div class="tarjeta_cara tarjeta_cara--frente">                                                       
+                            <img class="i2" src="Fotos/jugo de limon.png" alt="Jugo de limón" loading="lazy">
+                            <figcaption>Jugo de limón · $1300</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>El jugo de limon esta $1300  </h2>
+                        </div> 
+                    </div>    
+                </div>
+                <div class="scena">
+                    <div class="tarjeta">
+                        <div class="tarjeta_cara tarjeta_cara--frente"> 
+                            <img class="i2" src="Fotos/Jugo-en-Polvo-Tang-Limonada.png" alt="Tang Limón" loading="lazy">
+                            <figcaption>Tang Limón · $1000</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>El jugo en sobre esta $1000 cada uno</h2>
+                        </div> 
+                    </div>    
+                </div> 
+                <div class="scena">
+                    <div class="tarjeta">
+                        <div class="tarjeta_cara tarjeta_cara--frente">
+                            <img class="i2" src="Fotos/Coca 3l.png" alt="Coca Cola 3l" loading="lazy">
+                            <figcaption>Coca Cola 3l · $5000</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                            <h2>La cocacola esta $5000 </h2> 
+                        </div> 
+                    </div>    
+                </div> 
+                <div class="scena">
+                    <div class="tarjeta">
+                        <div class="tarjeta_cara tarjeta_cara--frente"> 
+                            <img class="i2" src="Fotos/Queso rallado.png" alt="Queso rallado" loading="lazy">
+                            <figcaption>Queso rallado · $2500</figcaption>
+                        </div> 
+                        <div class="tarjeta_cara tarjeta_cara--atras">
+                             <h2>El queso rallado esta $2500 </h2>
+                        </div> 
+                    </div>    
+                </div> 
             </div>
         </div>
+
+
+        
         <section class="productos_dest" style="width:100%;margin-top:40px;">
             <h2 style="text-align:center;">Productos destacados</h2>
             <div class="grid-prod-dest" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="card">
-                    <img src="Fotos/pollo entero.jpg" alt="Pollo entero">
+                    <img src="" alt="Pollo entero">
                     <h3>Pollo entero</h3>
                     <p>Ideal para asar o cocinar al horno.</p>
                     <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
                 </div>
                 <div class="card">
-                    <img src="Fotos/images.jpg" alt="pechuga" >
+                    <img src="" alt="pechuga" >
                     <h3 class="bajo">Pechuga</h3>
                     <p>Perfecta para recetas saludables.</p>
                     <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
                 </div>
                 <div class="card">
-                <img src="Fotos/nuggets de pollo.jpg" alt="pechuga">
-                <h3>Nuggets de pollo</h3>
-                <p>Ideales para los más chicos.</p>
-                <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
+                    <img src="" alt="nuggets">
+                    <h3>Nuggets de pollo</h3>
+                    <p>Ideales para los más chicos.</p>
+                    <button class="bt" onclick="window.location.href='Productos.html'">Ver más</button>
+                </div>
             </div>
-        </div>
-    </section>
-        
+        </section> 
         <footer>
             <p> &copy; 2025 Pollería Belgrano | Ricardo Rojas, Neuquén | Tel: (299) 123-4567</p>
         </footer>
+        
+                <script>
+                    (function(){
+                        var tarjetas = document.querySelectorAll('.tarjeta');
+                        tarjetas.forEach(function(t){
+                            
+                            t.addEventListener('click', function(e){
+                                t.classList.toggle('is-flipped');
+                            });
+                            
+                            t.addEventListener('keydown', function(e){
+                                if (e.key === 'Enter' || e.key === ' '){
+                                    e.preventDefault();
+                                    t.classList.toggle('is-flipped');
+                                }
+                            });
+                        });
+                    })();
+                </script>
+        <script src="js/js.js"></script>
+        <script src="node_modules\animejs\lib/anime.min.js"></script>
     </body>
 </html> 
