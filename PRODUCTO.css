@@ -66,13 +66,9 @@ body.tema-oscuro .titulo {
     background: rgba(31, 41, 55, 0.95) !important;
     color: #fff !important;
 }
-body.tema-oscuro .titulo2 {
-    background: rgba(31, 41, 55, 0.95) !important;
-    color: #fff !important;
-}
-    body.tema-oscuro .lateral-izq,
-    body.tema-oscuro .lateral-der,
-    body.tema-oscuro .card {
+
+    
+    body.tema-oscuro .tarjeta {
     background: #1f2937 !important;
     border-color: #374151 !important;
     color: #e5e7eb !important;
@@ -107,19 +103,13 @@ body.tema-oscuro nav ul li a:hover {
     background: #374151 !important;
     color: #ffd700 !important;
 }
-
-body.tema-oscuro .horrarios table {
-    background: #1f2937 !important;
-    color: #e5e7eb !important;
+body.tema-oscuro .tarjeta_cara--frente{
+    background-color: #121212 !important;
 }
-body.tema-oscuro .horrarios th {
-    background: #374151 !important;
-    color: #ffd700 !important;
+body.tema-oscuro .colum{
+    border: 1px solid #121212 !important;
 }
 
-body.tema-oscuro .horrarios tr:nth-child(even) {
-    background: #283548 !important;
-}
 
 /* Transiciones suave para cambios de tema */
 body, nav, .card, .lateral-izq, .lateral-der, .titulo, footer, .bt {
