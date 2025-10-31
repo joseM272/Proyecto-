@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel = "stylesheet" href="css/style.css"> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="https://js.cx/libs/animate.js"></script>
         <link rel = "stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
         <title>Productos apartes de la polleria</title>
@@ -203,6 +203,27 @@
                             });
                         });
                     })();
+                    function animateText(h2) {
+                        let text = h2.value;
+                        let to = text.length,
+                        from = 0;
+
+                        animate({
+                        duration: 5000,
+                        timing: bounce,
+                        draw: function(progress) {
+                        let result = (to - from) * progress + from;
+                        h2.value = text.slice(0, Math.ceil(result))
+                            }
+                        });
+                    }
+                    function bounce(timeFraction) {
+                        for (let a = 0, b = 1; 1; a += b, b /= 2) {
+                        if (timeFraction >= (7 - 4 * a) / 11) {
+                        return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                        }
+                        }
+                    }
                 </script>
         <script src="js/js.js"></script>
     </body>

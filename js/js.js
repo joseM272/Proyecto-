@@ -30,29 +30,26 @@ document.addEventListener('DOMContentLoaded', () => {
         temaClaro();
     }
 });
-anime({
- targets: '#explosion',
-  scale: [1, 10], // Expande rápidamente
-  opacity: [1, 0],
-  duration: 200,
-  easing: 'easeOutElastic',
-  complete: function() {
-    // Iniciar la secuela después de la explosión principal
-    animateDebris();
-  } 
-});
-function animateDebris() {
-  const debris = document.querySelectorAll('.debris');
-  debris.forEach((el, index) => {
-    anime({
-      targets: el,
-      translateX: anime.random(-200, 200),
-      translateY: anime.random(-100, 100),
-      scale: anime.random(0.5, 2),
-      opacity: [1, 0],
-      duration: anime.random(1000, 3000),
-      easing: 'easeOutQuart',
-      delay: index * 100
-    });
+
+//hacer que las letras se escriban con una nimacion.
+
+function animate({timing, draw, duration}) {
+
+  let start = performance.now();
+
+  requestAnimationFrame(function animate(time) {
+    // timeFraction va de 0 a 1
+    let timeFraction = (time - start) / duration;
+    if (timeFraction > 1) timeFraction = 1;
+
+    // calcular el estado actual de la animación
+    let progress = timing(timeFraction);
+
+    draw(progress); // dibujar
+
+    if (timeFraction < 1) {
+      requestAnimationFrame(animate);
+    }
+
   });
-}   
+}
