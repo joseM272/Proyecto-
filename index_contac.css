@@ -1,0 +1,113 @@
+body{
+    background-color: #fdd700; 
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin: bottom 10px; ;
+}
+
+.titulo{
+    text-align: center;
+    padding: 45px;
+    margin: auto;
+    background-color: #dd9c11;
+    border-radius: 5px;
+    max-height: 25px;
+    max-width: 1700px;
+    min-width: 1440px;
+}
+
+nav{
+    background-color: #e67e22;
+    padding: 14px 0;
+    border-radius: 0 0 8px 8px rgba(0,0,0,0.18);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a{
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+font-size: 18px;
+letter-spacing: 1px;
+transition: color 0.3s, text-shadow 0.3;
+padding: 6px 12px;
+border-radius: 4px;
+}
+
+nav ul li a:hover{
+color: #e67e22;
+background: #fff;
+text-shadow: 0 0 6px #ffd700;
+}
+
+
+.formulario:hover{
+    transform: scale(1.1);
+}
+.formulario {
+    display: flex;
+    flex-direction: column; /* Establece que los elementos del formulario se alineen verticalmente */
+    gap: 10px; /* Espacio entre los elementos */
+    background-color: #ffcc00; /* Fondo amarillo */
+
+    max-width: 500px;
+    margin: 2rem auto;
+    background: #ffb522;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%; /* Asegura que los campos llenen todo el ancho disponible */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario input[type="submit"] {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #45a049; /* Cambio de color al pasar el mouse */
+}
+
+#mensaje-enviado {
+    display: none;
+    color: green;
+    font-weight: bold;
+}

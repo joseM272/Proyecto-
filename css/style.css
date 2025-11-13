@@ -140,6 +140,9 @@ nav ul li a:hover {
     background: #e67e22;
     color: #fff;
 }
+.horrarios td {
+    color: #e67e22;
+}
 .horrarios tr:nth-child(even) {
     background: #f9e7c7;
 }
